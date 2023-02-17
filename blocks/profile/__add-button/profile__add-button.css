@@ -3,11 +3,11 @@
     height: 50px;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
-    box-sizing: border-box;
+    
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../../../images/Add\ Button.svg);
+    background-image: url(../../../images/Add_Button.svg);
     transition: .2s;
     padding: 0;
     cursor: pointer;
@@ -18,10 +18,9 @@
     opacity: .6;
   }
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 425px) {
     .profile__add-button {
-       max-width: 282px;
-       
+       min-width: 282px;
        
     }
 }

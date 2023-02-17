@@ -3,15 +3,8 @@
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 282px);
-    grid-template-rows: repeat(2, 361px);
+    grid-template-columns: repeat(auto-fit, 282px);
+    justify-content: center;
     gap: 20px 17px;
 }
 
-@media screen and (max-width: 767px){
-.element__list {
-    grid-template-columns: repeat(1, 282px);
-    grid-template-rows: repeat(6, 361px);
-    row-gap: 20px;
-}
-}

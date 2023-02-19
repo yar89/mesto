@@ -17,65 +17,77 @@
             <div class="profile__info">
                <div class="profile__info-container">
                    <h1 class="profile__name">Ярослава Т.</h1>
-                   <button type="button" class="profile__edit-button" aria-label="Name"></button>
+                   <button type="button" class="profile__edit-button" aria-label="Редактировать"></button>
                 </div>   
                 <h2 class="profile__description">Исследователь веб-технологий</h2>
             </div>
-            <button type="button" class="profile__add-button" aria-label="Name"></button>
+            <button type="button" class="profile__add-button" aria-label="Добавить"></button>
         </section>
         <section class="elements">
             <ul class="element__list">
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7459.JPG" alt="Геленджик">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Геленджик</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7442.JPG" alt="Новороссийск">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Новороссийск</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7475.JPG" alt="Геленджик">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Геленджик</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7487.JPG" alt="Геленджик">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Геленджик</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7493.JPG" alt="Геленджик">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Геленджик</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 <li class="element__card">
-                    <img class="element__image" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск">
+                    <img class="element__image" src="./images/IMG_7535.JPG" alt="Горячий ключ">
                     <div class="element__description">
-                        <h2 class="element__title">Карачаевск</h2>
+                        <h2 class="element__title">Горячий ключ</h2>
                         <button class="element__button" type="button" aria-label="Поставить лайк"></button>
                       </div>
                 </li>
                 
             </ul>
         </section>
-          
-        
+     
     </main>
-    <section class="footer">
+    <footer class="footer">
         <p class="footer__copyright">&copy; 2023. Mesto Russia</p>
-    </section>
+    </footer>
+    
+    <div class="popup">
+        <div class="popup__container">
+            <button class="popup__close" type="button" aria-label="Закрыть"></button>
+            <form class="popup__form">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <input class="popup__input popup__input_type-name" type="text" name="name" placeholder="Имя пользователя" required>
+                <input class="popup__input popup__input_type-profession" type="text" name="profession" placeholder="Профессия" required>
+                <input class="popup__submit-button" type="submit" value="Сохранить">
+            </form>
+        </div>
+
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

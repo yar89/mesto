@@ -1,4 +1,4 @@
-.element__button {
+.card__button {
     width: 22px;
     height: 19px;
     padding: 0;
@@ -12,6 +12,6 @@
     transition: .2s;
 }
 
-.element__button:hover {
+.card__button:hover {
     opacity: .6;
   }

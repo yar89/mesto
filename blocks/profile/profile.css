@@ -9,14 +9,14 @@
 
 @media screen and (max-width: 990px) {
     .profile {
-       max-width: 90%;
+        max-width: 90%;
     }
 }
 
 @media screen and (max-width: 767px) {
     .profile {
-       max-width: 282px;
-       flex-direction: column;
-       margin-bottom: 36px;
+        max-width: 282px;
+        flex-direction: column;
+        margin-bottom: 36px;
     }
 }

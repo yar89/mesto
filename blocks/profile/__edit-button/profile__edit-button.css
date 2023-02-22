@@ -1,7 +1,7 @@
 .profile__edit-button {
     background-color: transparent;
     border: 1px solid #FFFFFF;
-    background-image: url(../../../images/Edit\ Button.svg);
+    background-image: url(../../../images/Edit_Button.svg);
     background-repeat: no-repeat;
     background-size: contain;
     padding: 0;
@@ -14,7 +14,7 @@
 
 .profile__edit-button:hover {
     opacity: .6;
-  }
+}
 
 @media screen and (max-width: 425px) {
     .profile__edit-button {

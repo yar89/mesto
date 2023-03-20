@@ -1,5 +1,5 @@
-.card__button {
-    width: 22px;
+.card__like-button {
+    min-width: 22px;
     height: 19px;
     padding: 0;
     border: none;
@@ -12,6 +12,6 @@
     transition: .2s;
 }
 
-.card__button:hover {
+.card__like-button:hover {
     opacity: .5;
 }

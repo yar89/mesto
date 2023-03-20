@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "http://cardDeliteButton.addEventListener('click',);",
+            "request": "launch",
+            "url": "http://cardDeliteButton.addEventListener('click',);"
+        }
+    ]
+}

@@ -25,67 +25,57 @@
         </section>
         <section class="cards">
             <ul class="cards__list">
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7459.JPG" alt="Геленджик">
-                    <div class="card__description">
-                       <h2 class="card__title">Геленджик</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7442.JPG" alt="Новороссийск">
-                    <div class="card__description">
-                       <h2 class="card__title">Новороссийск</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7475.JPG" alt="Геленджик">
-                    <div class="card__description">
-                       <h2 class="card__title">Геленджик</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7487.JPG" alt="Геленджик">
-                    <div class="card__description">
-                       <h2 class="card__title">Геленджик</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7493.JPG" alt="Геленджик">
-                    <div class="card__description">
-                       <h2 class="card__title">Геленджик</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
-                <li class="card">
-                    <img class="card__image" src="./images/IMG_7535.JPG" alt="Горячий ключ">
-                    <div class="card__description">
-                       <h2 class="card__title">Горячий ключ</h2>
-                       <button class="card__button" type="button" aria-label="Поставить лайк"></button>
-                    </div>
-                </li>
             </ul>
         </section>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2023. Mesto Russia</p>
     </footer>
-    
-    <div class="popup">
+    <!--попап редактирования профиля-->
+    <div class="popup popup_type_edit-profile">
         <div class="popup__container">
-            <button class="popup__close" type="button" aria-label="Закрыть"></button>
-            <form class="popup__form" name="popupForm" method="post">
+            <button class="popup__close popup__close_profile" type="button" aria-label="Закрыть"></button>
+            <form class="popup__form popup__form_edit-profile" name="myForm" method="post">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <input class="popup__input popup__input_type_profile-name" type="text" name="name" placeholder="Имя пользователя" required>
                 <input class="popup__input popup__input_type_profile-profession" type="text" name="profession" placeholder="Профессия" required>
                 <button type="submit" class="popup__submit-button">Сохранить</button>
             </form>
         </div>
-
     </div>
+    <!--попап добавления карточки-->
+    <div class="popup popup_type_add-card">
+        <div class="popup__container">
+            <button class="popup__close popup__close_add-card" type="button" aria-label="Закрыть"></button>
+            <form class="popup__form popup__form_add-card" name="myForm" method="post">
+                <h2 class="popup__title">Новое место</h2>
+                <input class="popup__input popup__input_type_place-name" type="text" name="place-name" placeholder="Название" required>
+                <input class="popup__input popup__input_type_link" type="url" name="place-link" placeholder="Ссылка на картинку" required>
+                <button type="submit" class="popup__submit-button">Создать</button>
+            </form>
+        </div>
+    </div>
+    <!--попап увеличенного изображения карточки-->
+    <div class="popup popup_type_large-image">
+        <div class="popup__image-container">
+            <button class="popup__close popup__close_large-image" type="button" aria-label="Закрыть"></button>
+            <figure class="popup__figure">
+                <img class="popup__image" src="#"  alt="#">
+                <figcaption class="popup__image-caption"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <template class="card-template">
+        <li class="card">
+            <button class="card__delite-button" type="button" aria-label="Удалить"></button>
+            <img class="card__image" src="#"  alt="#">
+            <div class="card__description">
+               <h2 class="card__title"></h2>
+               <button class="card__like-button" type="button" aria-label="Поставить лайк"></button>
+
+            </div>
+        </li>
+    </template>
     <script src="./scripts/index.js"></script>
 </body>
 </html>

@@ -88,7 +88,7 @@ function creatFunckCard (cardName, cardLink){
   };
 
 
-//функция обработки кнопки submit в cardAddPopup
+//функция обработки кнопки submit в cardAddPopup/добавление новой карточки в разметку
 function handleAddCardForm(evt) {
   evt.preventDefault();
   cardList.prepend(creatFunckCard(cardName.value, cardLink.value));

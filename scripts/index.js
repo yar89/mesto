@@ -1,4 +1,6 @@
 // Находим форму в DOM
+
+
 const profileEditButton = document.querySelector('.profile__edit-button'); 
 const profileAddCardButton = document.querySelector('.profile__add-button');
 const profileUserName = document.querySelector('.profile__name');
@@ -138,4 +140,14 @@ closeAddcardButton.addEventListener("click", function () {
  profileAddCardButton.addEventListener('click', handleAddCardButton);
  profileEditForm.addEventListener('submit', handleFormSubmit);
  cardAddForm.addEventListener('submit', handleAddCardForm);
+
+ // закрывает попап по клику за его пределами
+const popupList = document.querySelectorAll(".popup"); 
+popupList.forEach((popup) => {
+  popup.addEventListener("click", function (evt) {
+    if (evt.target === popup) {
+      popup.classList.remove("popup_opened");
+    }
+  });
+});
 

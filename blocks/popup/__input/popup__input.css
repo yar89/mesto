@@ -10,13 +10,15 @@
     margin: 0 auto;
     padding: 0 0 10px 0;
 }
-  
+
+
 @media screen and (max-width: 767px) {
     .popup__input {
         max-width: 238px;
     }
 }
-  
+ 
+ 
 .popup__input:nth-of-type(1)  {
     margin-bottom: 28px;
 }

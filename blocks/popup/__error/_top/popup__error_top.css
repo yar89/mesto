@@ -1,0 +1,10 @@
+.popup__error_top {
+    position: absolute;
+    top: 143px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__error_top {
+        top: 145px;
+    }
+}

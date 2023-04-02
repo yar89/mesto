@@ -1,5 +1,5 @@
 .popup__submit-button {
-    max-width: 358px;
+    width: 358px;
     min-width: 83%;
     background-color: #000;
     color: #fff;
@@ -10,7 +10,7 @@
     border-radius: 2px;
     border: none;
     height: 50px;
-    margin: 0 auto 37px;
+    margin: 28px auto 37px;
     cursor: pointer;
 }
   

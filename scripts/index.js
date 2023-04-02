@@ -141,13 +141,21 @@ closeAddcardButton.addEventListener("click", function () {
  profileEditForm.addEventListener('submit', handleFormSubmit);
  cardAddForm.addEventListener('submit', handleAddCardForm);
 
- // закрывает попап по клику за его пределами
+ // закрывает попап по клику за его пределами и при нажатии на Escape
 const popupList = document.querySelectorAll(".popup"); 
 popupList.forEach((popup) => {
   popup.addEventListener("click", function (evt) {
     if (evt.target === popup) {
-      popup.classList.remove("popup_opened");
+      closePopup (popup);
     }
-  });
+     });
+     document.addEventListener('keydown', function (evt) {
+       if (evt.key === 'Escape') {
+      closePopup (popup);
+      };
+    });  
 });
+
+
+
 

@@ -32,6 +32,7 @@ initialCards.forEach(function (element) {
 //функция открытия попапа
 function openPopup(popup) {
 popup.classList.add('popup_opened');
+document.addEventListener('keydown', closeByEscape);
 };
 
 //функция открытия попапа редактирования профиля
@@ -42,7 +43,7 @@ function handleEditButton () {
 }
 
 //функция сохранения внесенных данных при редактировании профиля
-function handleFormSubmit (evt) {
+function handleProfileFormSubmit (evt) {
   evt.preventDefault(); 
   profileUserName.textContent = nameInput.value;
   profileUserProfession.textContent = jobInput.value;
@@ -58,6 +59,7 @@ function handleAddCardButton () {
  //функция закрытия попапа
 function closePopup (popup) {
    popup.classList.remove('popup_opened');
+   document.removeEventListener('keydown', closeByEscape);
 }
 
 //функция создания карточки/установка слушателей 
@@ -73,6 +75,7 @@ function creatFunckCard (cardName, cardLink){
   //добавление слушателя событий для удаления карточек
   cardDeliteButton.addEventListener('click', function (evt) {
       deliteCard(evt);
+
   });
 
   //добавление слушателя событий для удаления лайков
@@ -96,8 +99,9 @@ function handleAddCardForm(evt) {
   cardList.prepend(creatFunckCard(cardName.value, cardLink.value));
   closePopup(cardAddPopup);
   evt.target.reset();
-};
+  };
 
+  
 
  //функция удаления карточек
 function deliteCard(event) {
@@ -120,41 +124,64 @@ function openPopupLargeImage () {
   openPopup(popupLargeImage);
 }
 
- // закрытие формы редактирования профиля 
-closeProfButton.addEventListener("click", function () {
-  closePopup(profileEditPopup);
-});
+//  // закрытие формы редактирования профиля 
+// closeProfButton.addEventListener("click", function () {
+//   closePopup(profileEditPopup);
+// });
 
-// закрытие формы увеличенной картинки 
-closeLargeImageButton.addEventListener("click", function () {
-  closePopup(popupLargeImage);
-});
+// // закрытие формы увеличенной картинки 
+// closeLargeImageButton.addEventListener("click", function () {
+//   closePopup(popupLargeImage);
+// });
 
-// закрытие формы добавления карточки 
-closeAddcardButton.addEventListener("click", function () {
-  closePopup(cardAddPopup);
-});
+// // закрытие формы добавления карточки 
+// closeAddcardButton.addEventListener("click", function () {
+//   closePopup(cardAddPopup);
+// });
  
  //обработчики событий
  profileEditButton.addEventListener('click', handleEditButton);
  profileAddCardButton.addEventListener('click', handleAddCardButton);
- profileEditForm.addEventListener('submit', handleFormSubmit);
+ profileEditForm.addEventListener('submit', handleProfileFormSubmit);
  cardAddForm.addEventListener('submit', handleAddCardForm);
 
- // закрывает попап по клику за его пределами и при нажатии на Escape
-const popupList = document.querySelectorAll(".popup"); 
-popupList.forEach((popup) => {
-  popup.addEventListener("click", function (evt) {
-    if (evt.target === popup) {
-      closePopup (popup);
-    }
-     });
-     document.addEventListener('keydown', function (evt) {
-       if (evt.key === 'Escape') {
-      closePopup (popup);
-      };
-    });  
-});
+ // закрывает попап по клику за его пределами
+// const popupList = document.querySelectorAll(".popup"); 
+// popupList.forEach((popup) => {
+//   popup.addEventListener("click", function (evt) {
+//     if (evt.target === popup) {
+//       //closePopup (popup);
+//       }
+//      });
+//     //  document.addEventListener('keydown', function (evt) {
+//     //    if (evt.key === 'Escape') {
+//     //   closePopup (popup);
+//     //   };
+//     // });  
+// });
+
+//функция закрытия попапа по нажатию на Escape
+function closeByEscape(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(document.querySelector('.popup_opened'));
+  }
+}
+
+
+// закрытие всех попапов на крестик и оверлей
+ const popups = document.querySelectorAll('.popup')
+
+popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close')) {
+          closePopup(popup);
+        }
+    })
+})
+
 
 
 

@@ -124,42 +124,14 @@ function openPopupLargeImage () {
   openPopup(popupLargeImage);
 }
 
-//  // закрытие формы редактирования профиля 
-// closeProfButton.addEventListener("click", function () {
-//   closePopup(profileEditPopup);
-// });
 
-// // закрытие формы увеличенной картинки 
-// closeLargeImageButton.addEventListener("click", function () {
-//   closePopup(popupLargeImage);
-// });
-
-// // закрытие формы добавления карточки 
-// closeAddcardButton.addEventListener("click", function () {
-//   closePopup(cardAddPopup);
-// });
- 
  //обработчики событий
  profileEditButton.addEventListener('click', handleEditButton);
  profileAddCardButton.addEventListener('click', handleAddCardButton);
  profileEditForm.addEventListener('submit', handleProfileFormSubmit);
  cardAddForm.addEventListener('submit', handleAddCardForm);
 
- // закрывает попап по клику за его пределами
-// const popupList = document.querySelectorAll(".popup"); 
-// popupList.forEach((popup) => {
-//   popup.addEventListener("click", function (evt) {
-//     if (evt.target === popup) {
-//       //closePopup (popup);
-//       }
-//      });
-//     //  document.addEventListener('keydown', function (evt) {
-//     //    if (evt.key === 'Escape') {
-//     //   closePopup (popup);
-//     //   };
-//     // });  
-// });
-
+ 
 //функция закрытия попапа по нажатию на Escape
 function closeByEscape(evt) {
   if (evt.key === 'Escape') {

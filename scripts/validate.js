@@ -9,26 +9,24 @@ const validationConfig = {
 }
 
 //Функция, которая находит и перебирает все формы на странице
-const enableValidation = ({formSelector, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass}) => {
+const enableValidation = ({ formSelector, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass }) => {
   const formList = Array.from(document.querySelectorAll(formSelector))
-  
+
   formList.forEach(formElement => {
     formElement.addEventListener('submit', (evt) => {
-    evt.preventDefault()
-  });
+      evt.preventDefault()
+    });
     setEventListeners(formElement, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass)
   })
 };
 
 
- //Добавляем слушатель событий всем полям ввода внутри формы
- const setEventListeners = (formElement, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass) => {
+//Добавляем слушатель событий всем полям ввода внутри формы
+const setEventListeners = (formElement, inputSelector, submitButtonSelector, inactiveButtonClass, inputErrorClass, errorClass) => {
   const inputList = Array.from(formElement.querySelectorAll(inputSelector));
   const buttonElement = formElement.querySelector(submitButtonSelector);
-  
   formElement.addEventListener('reset', () => {
-    buttonElement.classList.add(inactiveButtonClass);
-    buttonElement.setAttribute('disabled', true);
+    disableButton(buttonElement, inactiveButtonClass);
   })
   inputList.forEach((formInput) => {
     formInput.addEventListener('input', () => {
@@ -36,8 +34,8 @@ const enableValidation = ({formSelector, inputSelector, submitButtonSelector, in
       toggleButtonState(inputList, buttonElement, inactiveButtonClass, errorClass);
     });
   });
-  
-}; 
+
+};
 
 //Функция, которая добавляет класс с ошибкой
 const showError = (formElement, formInput, errorMessage, inputErrorClass, errorClass) => {
@@ -60,9 +58,9 @@ const hideError = (formElement, formInput, inputErrorClass, errorClass) => {
 //Функция, которая проверяет валидность поля
 const checkInputValidity = (formElement, formInput, inputErrorClass, errorClass) => {
   if (!formInput.validity.valid) {
-      showError(formElement, formInput, formInput.validationMessage, inputErrorClass, errorClass);
+    showError(formElement, formInput, formInput.validationMessage, inputErrorClass, errorClass);
   } else {
-      hideError(formElement, formInput, inputErrorClass, errorClass);
+    hideError(formElement, formInput, inputErrorClass, errorClass);
   }
 };
 
@@ -70,23 +68,26 @@ const checkInputValidity = (formElement, formInput, inputErrorClass, errorClass)
 
 // Функция принимает массив полей
 const hasInvalidInput = (inputList) => {
-return inputList.some((formInput) => {
-  return !formInput.validity.valid;
-})
+  return inputList.some((formInput) => {
+    return !formInput.validity.valid;
+  })
 };
 
 // Функция принимает массив полей ввода
 // и элемент кнопки, состояние которой нужно менять
 const toggleButtonState = (inputList, buttonElement, inactiveButtonClass) => {
-if (hasInvalidInput(inputList)) {
-  buttonElement.classList.add(inactiveButtonClass);
-  buttonElement.setAttribute('disabled', true);
+  if (hasInvalidInput(inputList)) {
+    disableButton(buttonElement, inactiveButtonClass);
   } else {
-  buttonElement.classList.remove(inactiveButtonClass);
-  buttonElement.removeAttribute('disabled', true);
-}
+    buttonElement.classList.remove(inactiveButtonClass);
+    buttonElement.removeAttribute('disabled', true);
+  }
 };
 
-
+//функция, деактивирующая кнопку
+const disableButton = (buttonElement, inactiveButtonClass) => {
+  buttonElement.classList.add(inactiveButtonClass);
+  buttonElement.setAttribute('disabled', true);
+};
 
 enableValidation(validationConfig);

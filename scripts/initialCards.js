@@ -1,5 +1,5 @@
 //начальный массив изображений
-const initialCards = [
+export const initialCards = [
     {
       name: 'Москва',
       link: 'https://images.unsplash.com/photo-1547448415-e9f5b28e570d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
@@ -26,4 +26,3 @@ const initialCards = [
     }
   ];
 
-  

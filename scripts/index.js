@@ -1,5 +1,5 @@
-import { initialCards, validationConfig } from "./constants.js";
 import { Card } from "./Card.js";
+import { initialCards, validationConfig } from "./constants.js";
 import { FormValidator } from "./FormValidator.js";
 
 // Находим форму в DOM

@@ -63,8 +63,20 @@ export class FormValidator {
     this._setEventListeners();
   }
 
+  resetValidation() {
+    this._setEventListeners();
+  }
+
   _disableButton() {
     this._buttonElement.classList.add(this._inactiveButtonClass);
     this._buttonElement.disabled = true;
+  }
+
+  resetValidation() {
+    this._toggleButtonState();
+    this._inputList.forEach((formInput) => {
+      this._hideError(formInput);
+    });
+    this._disableButton();
   }
 }

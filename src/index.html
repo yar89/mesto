@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
+   <!--<link rel="stylesheet" href="./pages/index.css">-->
     <title>Mesto</title>
 </head>
+
 <body class="page">
     <header class="header">
-       <img src="./images/logo.svg" alt="Логотип" class="header__logo">
+        <img src="<%=require('./images/logo.svg')%>" alt="Логотип" class="header__logo">
+        <!--<img src='./images/logo.svg' alt="Логотип" class="header__logo">-->
     </header>
     <main class="main">
         <section class="profile">
-            <img class="profile__avatar" src="./images/IMG_7462.jpg" alt="Изображение профиля">
+            <img src="<%=require('./images/IMG_7462.jpg')%>" class="profile__avatar" alt="Изображение профиля">
+            <!--<img src='./images/IMG_7462.jpg' class="profile__avatar"  alt="Изображение профиля">-->
             <div class="profile__info">
-               <div class="profile__info-container">
-                   <h1 class="profile__name">Ярослава Т.</h1>
-                   <button type="button" class="profile__edit-button" aria-label="Редактировать"></button>
-                </div>   
+                <div class="profile__info-container">
+                    <h1 class="profile__name">Ярослава Т.</h1>
+                    <button type="button" class="profile__edit-button" aria-label="Редактировать"></button>
+                </div>
                 <h2 class="profile__description">Исследователь веб-технологий</h2>
             </div>
             <button type="button" class="profile__add-button" aria-label="Добавить"></button>
@@ -38,11 +42,14 @@
             <form class="popup__form popup__form_edit-profile" name="myForm" method="post" novalidate>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <label class="popup__field">
-                    <input id="name-input" class="popup__input popup__input_type_profile-name" type="text" placeholder="Имя пользователя" required minlength="2" maxlength="40">
+                    <input id="name-input" name="name" class="popup__input popup__input_type_profile-name" type="text"
+                        placeholder="Имя пользователя" required minlength="2" maxlength="40">
                     <span class="name-input-error popup__error popup__error_top"></span>
                 </label>
                 <label class="popup__field">
-                    <input id="profession-input" class="popup__input popup__input_type_profile-profession" type="text" placeholder="Профессия" required minlength="2" maxlength="200">
+                    <input id="profession-input" name="profession"
+                        class="popup__input popup__input_type_profile-profession" type="text" placeholder="Профессия"
+                        required minlength="2" maxlength="200">
                     <span class="profession-input-error popup__error popup__error_bottom"></span>
                 </label>
                 <button type="submit" class="popup__submit-button">Сохранить</button>
@@ -56,14 +63,17 @@
             <form class="popup__form popup__form_add-card" name="myForm" method="post" novalidate>
                 <h2 class="popup__title">Новое место</h2>
                 <label class="popup__field">
-                    <input id="place-input" class="popup__input popup__input_type_place-name" type="text" placeholder="Название" required minlength="2" maxlength="30">
+                    <input id="place-input" name="name" class="popup__input popup__input_type_place-name" type="text"
+                        placeholder="Название" required minlength="2" maxlength="30">
                     <span class="place-input-error popup__error popup__error_top"></span>
                 </label>
                 <label class="popup__field">
-                    <input id="link-input" class="popup__input popup__input_type_link" type="url" placeholder="Ссылка на картинку" required>
+                    <input id="link-input" name="link" class="popup__input popup__input_type_link" type="url"
+                        placeholder="Ссылка на картинку" required>
                     <span class="link-input-error popup__error popup__error_bottom"></span>
                 </label>
-                <button type="submit" class="popup__submit-button popup__submit-button_disabled" disabled>Создать</button>
+                <button type="submit" class="popup__submit-button popup__submit-button_disabled"
+                    disabled>Создать</button>
             </form>
         </div>
     </div>
@@ -72,7 +82,7 @@
         <div class="popup__image-container">
             <button class="popup__close popup__close_large-image" type="button" aria-label="Закрыть"></button>
             <figure class="popup__figure">
-                <img class="popup__image" src="#"  alt="#">
+                <img class="popup__image" src="#" alt="#">
                 <figcaption class="popup__image-caption"></figcaption>
             </figure>
         </div>
@@ -80,15 +90,15 @@
     <template class="card-template">
         <li class="card">
             <button class="card__delite-button" type="button" aria-label="Удалить"></button>
-            <img class="card__image" src="#"  alt="#">
+            <img class="card__image" src="#" alt="#">
             <div class="card__description">
-               <h2 class="card__title"></h2>
-               <button class="card__like-button" type="button" aria-label="Поставить лайк"></button>
+                <h2 class="card__title"></h2>
+                <button class="card__like-button" type="button" aria-label="Поставить лайк"></button>
 
             </div>
         </li>
     </template>
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>

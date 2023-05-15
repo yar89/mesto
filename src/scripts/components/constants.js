@@ -31,6 +31,24 @@ export const validationConfig = {
   inputSelector: ".popup__input",
   submitButtonSelector: ".popup__submit-button",
   inactiveButtonClass: "popup__submit-button_disabled",
-  inputErrorClass: "popup__input_type_error",
+  inputErrorClass: "popup__input_type-error",
   errorClass: "popup__error_visible",
 };
+
+export const profileEditButton = document.querySelector(
+  ".profile__edit-button"
+);
+export const profileAddCardButton = document.querySelector(
+  ".profile__add-button"
+);
+export const profileEditForm = document.querySelector(
+  ".popup__form_edit-profile"
+);
+export const cardAddForm = document.querySelector(".popup__form_add-card");
+
+export const popupProfileSelector = ".popup_type_edit-profile";
+export const popupImageSelector = ".popup_type_large-image";
+export const cardListSelector = ".cards__list";
+export const nameUserSelector = ".profile__name";
+export const professionUserSelector = ".profile__description";
+export const popupAddCardSelector = ".popup_type_add-card";

@@ -46,6 +46,13 @@ export const profileEditForm = document.querySelector(
 );
 export const cardAddForm = document.querySelector(".popup__form_add-card");
 
+export const nameInput = document.querySelector(
+  ".popup__input_type_profile-name"
+);
+export const jobInput = document.querySelector(
+  ".popup__input_type_profile-profession"
+);
+
 export const popupProfileSelector = ".popup_type_edit-profile";
 export const popupImageSelector = ".popup_type_large-image";
 export const cardListSelector = ".cards__list";

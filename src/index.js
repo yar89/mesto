@@ -19,7 +19,9 @@ import {
   nameUserSelector,
   professionUserSelector,
   popupAddCardSelector,
-} from "./scripts/components/constants.js";
+  nameInput,
+  jobInput,
+} from "./scripts/utils/constants.js";
 
 const userInfo = new UserInfo(nameUserSelector, professionUserSelector);
 
@@ -76,6 +78,9 @@ function handleAddCardFormSubmit() {
 //функция открытия попапа редактирования профиля
 function handleEditProfileButtonClick() {
   formProfileEditValidator.resetValidation();
+  const infoObject = userInfo.getUserInfo();
+  nameInput.value = infoObject.name;
+  jobInput.value = infoObject.profession; 
   popupProfile.open();
 }
 

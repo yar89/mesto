@@ -1,31 +1,3 @@
-//начальный массив изображений
-export const initialCards = [
-  {
-    name: "Москва",
-    link: "https://images.unsplash.com/photo-1547448415-e9f5b28e570d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    name: "Красноярск",
-    link: "https://images.unsplash.com/photo-1587451152235-05466c2fc532?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    name: "Камчатка",
-    link: "https://images.unsplash.com/photo-1557094005-176cbfe3554d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1334&q=80",
-  },
-  {
-    name: "Петергоф",
-    link: "https://images.unsplash.com/photo-1610197361600-33a3a5073cad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    name: "Алтайский край",
-    link: "https://images.unsplash.com/photo-1494791286225-ea86fc957ba7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80",
-  },
-  {
-    name: "Байкал",
-    link: "https://images.unsplash.com/photo-1548130729-90d4d11826f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-  },
-];
-
 export const validationConfig = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
@@ -52,10 +24,19 @@ export const nameInput = document.querySelector(
 export const jobInput = document.querySelector(
   ".popup__input_type_profile-profession"
 );
+export const avatarEditForm = document.querySelector(
+  ".popup__form_edit-avatar"
+);
+export const profileAvatarEditButton = document.querySelector(
+  ".profile__avatar-overlay"
+);
 
 export const popupProfileSelector = ".popup_type_edit-profile";
 export const popupImageSelector = ".popup_type_large-image";
 export const cardListSelector = ".cards__list";
 export const nameUserSelector = ".profile__name";
 export const professionUserSelector = ".profile__description";
+export const avatarUserSelector = ".profile__avatar";
 export const popupAddCardSelector = ".popup_type_add-card";
+export const popupEditAvatarSelector = ".popup_type_edit-avatar";
+export const popupDeleteCardSelector = ".popup_type_delete-card";

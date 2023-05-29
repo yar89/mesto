@@ -1,0 +1,6 @@
+.card__like-group {
+    display: flex;
+    flex-direction: column;
+    max-width: 22px;
+    max-height: 35px;
+  }

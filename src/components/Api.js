@@ -5,6 +5,7 @@ export class Api {
     this._authorization = options.headers.authorization;
   }
 
+    //Проверка ответа от сервера и преобразование из json вынесена в отдельный метод
   _getResponseData(res) {
     if (!res.ok) {
       return Promise.reject(`Ошибка: ${res.status}`);

@@ -1,0 +1,34 @@
+.profile__avatar-overlay {
+    display: flex;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 31px;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+}
+
+.profile__avatar-overlay::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../images/edit-vector.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-size: 26px;
+    opacity: 0;
+}
+
+.profile__avatar-overlay:hover::before {
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    cursor: pointer;
+}
